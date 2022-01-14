@@ -11,7 +11,7 @@ var empSvc = new EmployeeService();
 
 //GET /employees/demo
 router.get("/demo",(req,res)=>{
-    res.status(200).json('data:Sample data from demo')
+    res.status(200).json({"data":"Sample data from demo"})
 });
 
 // Get All employees
