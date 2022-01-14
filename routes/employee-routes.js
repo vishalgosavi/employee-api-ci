@@ -8,7 +8,13 @@ var empSvc = new EmployeeService();
 
 
 //GET http://localhost:5000/employees
-//Get All employees
+
+//GET /employees/demo
+router.get("/demo",(req,res)=>{
+    res.status(200).json('data:Sample data from demo')
+});
+
+// Get All employees
 router.get("/", async (req, res) => {
     let emps = await empSvc.getAllEmployees().catch(err => res.status(500).json({ 'message': 'Unable to read employees' }));
 
